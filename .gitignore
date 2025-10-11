@@ -1,0 +1,17 @@
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.idx
+*.ilg
+*.ind
+*.log
+*.lol
+*.sig.lua
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.pdf
+*.tdo
+*__pycache__*

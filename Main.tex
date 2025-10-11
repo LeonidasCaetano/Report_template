@@ -1,0 +1,149 @@
+%=========================================================================================
+%tipo né
+\documentclass[12pt, imakeidx]{Pacotes/reportbr}
+%==================================================================
+%pacotes
+\input{PreAmbulo/10Pacotes}
+%==================================================================
+%titles & alineas
+\usepackage{Pacotes/pagesec}
+%==================================================================
+%Formatar sumário
+\usepackage{Pacotes/sumario}
+%==================================================================
+%formatar referencias e citações
+\usepackage[5-Refs/referencias.bib]{Pacotes/refs}
+%==================================================================
+%tikz
+\input{PreAmbulo/90Tikz}
+%\usetikzlibrary{external}
+%\tikzexternalize[prefix=Ilustrações/Tikz/]
+%==================================================================
+%indentifymodel
+\titulo			{Meu modelo ABNT}
+\subtitulo		{}
+\local			{Rio de Janeiro, RJ}
+\institution		{}
+\campus			{}
+%=============================================
+\autorum	 		{Leonidas Caetano da Silva}
+\autordois	 	{}
+\autortres	 	{}
+\autorquatro 	{}
+\orientador	 	{None}
+\coorientador	{None}
+%=============================================
+\nota			{Teste}
+\palavraschaves	{"LuaLaTeX", "ABNT", "Python", }
+\epigraphy		{}
+\dedique			{GabiOli}
+\banca			{}{}
+%==================================================================
+%\usepackage{todonotes}
+%=========================================================================================
+\begin{document}
+\input{PreAmbulo/120SetsIniciais}
+%==================================================================
+\begin{titlepage}
+\makeatletter
+	\@ifpackageloaded{todonotes}{\listoftodos[Coisas a fazer]}{}
+\makeatother
+\end{titlepage}
+%=============================================
+
+\frontpages
+
+%==================================================================
+
+\input{1-PreTextual/FichaCatalografica}
+\newpage
+
+\input{1-PreTextual/Errata}
+\newpage
+
+\input{1-PreTextual/FolhaDeAprovacao}
+\newpage
+
+%==================================================================
+
+\printdedicatoria
+
+\input{1-PreTextual/Agradecimentos}
+\newpage
+
+\printepigraphy
+
+\input{1-PreTextual/Resumo}
+
+%==================================================================
+
+\input{1-PreTextual/Listas}
+
+%==================================================================
+
+\bodysec
+
+%==================================================================
+
+%texto
+
+\input{2-Textual/1-Desenvolvimento/D1}
+
+\input{2-Textual/1-Desenvolvimento/D2}
+
+\input{2-Textual/1-Desenvolvimento/D3}
+
+\input{2-Textual/1-Desenvolvimento/D4}
+
+\input{2-Textual/1-Desenvolvimento/D5}
+
+\input{2-Textual/1-Desenvolvimento/D6}
+
+%==================================================================
+
+%texto
+
+\input{2-Textual/2-Desenvolvimento/D1}
+
+\input{2-Textual/2-Desenvolvimento/D2}
+
+\input{2-Textual/2-Desenvolvimento/D3}
+
+\input{2-Textual/2-Desenvolvimento/D4}
+
+%==================================================================
+
+\initsec
+
+%==================================================================
+
+\let\tmp\chapter
+\let\chapter\finalsection
+
+\makeref{Referências}\nocite{*}
+
+\ifdefined\printglossario \printglossario\fi
+
+%==================================================================
+
+\let\chapter\append
+
+\input{3-PosTextual/Apendices/A1}
+
+%==================================================================
+
+\let\chapter\anex
+
+\input{3-PosTextual/Anexos/A1}
+
+\input{3-PosTextual/Anexos/A1}
+
+%==================================================================
+
+\let\chapter\finalsection
+
+\ifdefined\printindex \printindex\fi
+
+%==================================================================
+\end{document}
+%=========================================================================================
