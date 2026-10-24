@@ -2,7 +2,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{sumario}[sumario]
 %=========================================================================================
-\RequirePackage{Pacotes/luasiglas}
+\RequirePackage{.Pacotes/luasiglas}
 \RequirePackage{titletoc}%formatar sumario
 \RequirePackage{newfloat}%novos ambientes/listas
 \RequirePackage{listings}
@@ -20,8 +20,8 @@
 	placement 		 = H,
 	chapterlistsgaps = off
 }
-\IfFileExists{Pacotes/longtab.sty}{
-\RequirePackage[lol]{Pacotes/longtab}
+\IfFileExists{.Pacotes/longtab.sty}{
+\RequirePackage[lol]{.Pacotes/longtab}
 \let\longtable\longtabela\relax
 \let\endlongtable\endlongtabela\relax}{}
 \renewcommand{\thetable}{\arabic{table}}
@@ -33,8 +33,8 @@
     placement 			= !ht,
     chapterlistsgaps 	= off
 ]{quadro}
-\IfFileExists{Pacotes/longquadro.sty}{
-\RequirePackage[lol]{Pacotes/longquadro}}{}
+\IfFileExists{.Pacotes/longquadro.sty}{
+\RequirePackage[lol]{.Pacotes/longquadro}}{}
 \renewcommand{\thequadro}{\arabic{quadro}}
 %=============================================
 \DeclareFloatingEnvironment[

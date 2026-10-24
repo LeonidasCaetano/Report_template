@@ -3,10 +3,14 @@
 \ifdefined\pdfoutput%
 	\typeout{using pdfTeX}
 \fi
+
 \ifdefined\directlua
+	\typeout{using LuaTex}
 	\setmainfont{Arial}					%Arial :)
 \fi
+
 \ifdefined\XeTeXversion
+	\typeout{using XeTeX}
 	\setmainfont{Arial}					%Arial :)
 \fi
 
